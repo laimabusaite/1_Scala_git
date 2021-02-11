@@ -6,11 +6,11 @@ object BonusCalculator extends App {
   val employee = readLine("What is your name? ")
   println(s"Nice to talk to you $employee!")
 
-  val timeWorked = readLine("Years worked: ").toInt
+  val timeWorked = readLine("Full years worked: ").toInt
   val monthlyWage = readLine("Monthly wage: ").toDouble
+  val bonusYearLimit = 2
 
-  val bonus = ((if (timeWorked >= 2) timeWorked-2 else 0) * 0.15 * monthlyWage * 100.0).round / 100.0
-
+  val bonus = ((if (timeWorked >= bonusYearLimit) timeWorked-bonusYearLimit else 0) * 0.15 * monthlyWage * 100.0).round / 100.0
   println(s"Your holiday bonus is $bonus")
 
   //Ask for how long they have worked
