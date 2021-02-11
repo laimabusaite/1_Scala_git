@@ -16,7 +16,7 @@ object FunctionExercises extends App {
 //      println(pIteration, years)
     }
 //    years
-    if (!(pIteration < p0)) years else -1
+    if (pIteration >= p0) years else -1
 
 
   }
